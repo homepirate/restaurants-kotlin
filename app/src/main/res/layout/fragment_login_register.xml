@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Логотип приложения -->
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/app_logo_desc"
+        android:src="@drawable/app_logo" />
+
+    <!-- Название приложения -->
+
+    <!-- Кнопка Вход -->
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Еда Для Меня"
+        android:textColor="@color/dark_blue"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="294dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/dark_blue"
+        android:text="Вход"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <!-- Кнопка Регистрация -->
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="294dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/dark_blue"
+        android:text="Регистрация"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+</LinearLayout>

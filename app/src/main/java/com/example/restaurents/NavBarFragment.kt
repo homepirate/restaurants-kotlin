@@ -28,18 +28,22 @@ class NavBarFragment : Fragment() {
                     // Обработка нажатия на "Поиск"
                     true
                 }
+
                 R.id.navigation_recommendations -> {
                     // Обработка нажатия на "Рекомендации"
                     true
                 }
+
                 R.id.navigation_map -> {
                     // Обработка нажатия на "Карта"
                     true
                 }
+
                 R.id.navigation_profile -> {
                     // Обработка нажатия на "Профиль"
                     true
                 }
+
                 else -> false
             }
         }
