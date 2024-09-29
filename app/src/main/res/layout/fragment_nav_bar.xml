@@ -7,6 +7,6 @@
     android:layout_alignParentBottom="true"
     android:background="@color/light_grey"
     android:visibility="visible"
-    app:itemTextColor="@color/dark_blue"
     app:itemIconSize="52dp"
+    app:itemTextColor="@color/dark_blue"
     app:menu="@menu/bottom_nav_menu" />
