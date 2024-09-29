@@ -14,7 +14,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         if (savedInstanceState == null) {
-            showFragment(NavBarFragment::class.java)
+//            showFragment(NavBarFragment::class.java)
+            showFragment(LoginRegisterFragment::class.java)
         }
     }
 
