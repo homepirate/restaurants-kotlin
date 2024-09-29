@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
 //            showFragment(NavBarFragment::class.java)
             showFragment(LoginRegisterFragment::class.java)
+//            showFragment(SearchFragment::class.java)
         }
     }
 

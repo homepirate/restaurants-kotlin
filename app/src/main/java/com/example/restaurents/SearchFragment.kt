@@ -1,6 +1,8 @@
 package com.example.restaurents
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,6 +20,7 @@ class SearchFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout using view binding
+
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -28,7 +31,13 @@ class SearchFragment : Fragment() {
         // Add SearchFieldFragment to the container
         childFragmentManager.beginTransaction()
             .replace(binding.searchFieldContainer.id, SearchFieldFragment()) // Ensure this matches your layout ID
-            .commit()
+            .commitNow()
+
+        Handler(Looper.getMainLooper()).post {
+            childFragmentManager.beginTransaction()
+                .replace(binding.navBarContainer.id, NavBarFragment())
+                .commit() // Now safe to commit
+        }
     }
 
     override fun onDestroyView() {
