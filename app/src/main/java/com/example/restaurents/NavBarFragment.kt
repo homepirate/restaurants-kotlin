@@ -29,21 +29,25 @@ class NavBarFragment : Fragment() {
                     (activity as MainActivity).showFragment(SearchFragment::class.java)
                     true
                 }
+
                 R.id.navigation_recommendations -> {
                     Log.d("NavBarFragment", "Recommendations button clicked")
                     //(activity as MainActivity).showFragment(RecommendationsFragment::class.java)
                     true
                 }
+
                 R.id.navigation_map -> {
                     Log.d("NavBarFragment", "Map button clicked")
                     //(activity as MainActivity).showFragment(MapFragment::class.java)
                     true
                 }
+
                 R.id.navigation_profile -> {
                     Log.d("NavBarFragment", "Profile button clicked")
                     //(activity as MainActivity).showFragment(ProfileFragment::class.java)
                     true
                 }
+
                 else -> false
             }
         }
