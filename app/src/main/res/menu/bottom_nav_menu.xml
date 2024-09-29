@@ -4,13 +4,11 @@
         android:id="@+id/navigation_search"
         android:title="Поиск"
         android:icon="@drawable/ic_search"
-
         />
     <item
         android:id="@+id/navigation_recommendations"
         android:title="Рекомендации"
         android:icon="@drawable/ic_rec"
-
         />
     <item
         android:id="@+id/navigation_map"
