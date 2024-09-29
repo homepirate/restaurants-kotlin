@@ -27,7 +27,7 @@ class LoginRegisterFragment : Fragment() {
         // Установить слушатели кликов для кнопок
         loginButton.setOnClickListener {
             // Открыть фрагмент входа
-//            (activity as MainActivity).showFragment(LoginFragment::class.java)
+            (activity as MainActivity).showFragment(SearchFragment::class.java)
             println("Open login")
         }
 
