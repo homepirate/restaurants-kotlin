@@ -2,24 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigation_search"
-        android:title="Поиск"
+        android:title=""
         android:icon="@drawable/ic_search"
 
         />
     <item
         android:id="@+id/navigation_recommendations"
-        android:title="Рекомендации"
+        android:title=""
         android:icon="@drawable/ic_rec"
 
         />
     <item
         android:id="@+id/navigation_map"
         android:icon="@drawable/ic_map"
-        android:title="Карта"
+        android:title=""
         />
     <item
         android:id="@+id/navigation_profile"
-        android:title="Профиль"
+        android:title=""
         android:icon="@drawable/ic_user"
         />
 </menu>
