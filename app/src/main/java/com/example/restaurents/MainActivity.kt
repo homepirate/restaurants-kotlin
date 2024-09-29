@@ -13,9 +13,9 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-//        if (savedInstanceState == null) {
-//            showFragment(OnboardFragment::class.java)
-//        }
+        if (savedInstanceState == null) {
+            showFragment(NavBarFragment::class.java)
+        }
     }
 
     public fun showFragment(fragmentClass: Class<out Fragment>) {
