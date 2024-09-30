@@ -19,25 +19,24 @@ class SearchFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout using view binding
 
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
+        Handler(Looper.getMainLooper()).post {
+            childFragmentManager.beginTransaction()
+                .replace(binding.navBarContainer.id, NavBarFragment())
+                .commitNow()
+        }
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Add SearchFieldFragment to the container
         childFragmentManager.beginTransaction()
             .replace(binding.searchFieldContainer.id, SearchFieldFragment()) // Ensure this matches your layout ID
             .commitNow()
 
-        Handler(Looper.getMainLooper()).post {
-            childFragmentManager.beginTransaction()
-                .replace(binding.navBarContainer.id, NavBarFragment())
-                .commit() // Now safe to commit
-        }
     }
 
     override fun onDestroyView() {

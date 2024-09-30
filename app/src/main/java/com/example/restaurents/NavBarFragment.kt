@@ -32,7 +32,7 @@ class NavBarFragment : Fragment() {
 
                 R.id.navigation_recommendations -> {
                     Log.d("NavBarFragment", "Recommendations button clicked")
-                    //(activity as MainActivity).showFragment(RecommendationsFragment::class.java)
+                    (activity as MainActivity).showFragment(RecommendationFragment::class.java)
                     true
                 }
 
