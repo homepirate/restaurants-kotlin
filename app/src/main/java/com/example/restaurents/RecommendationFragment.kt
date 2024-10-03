@@ -40,11 +40,6 @@ class RecommendationFragment : Fragment() {
         restaurantAdapter = RestaurantAdapter(restaurants)
         binding.recyclerView.adapter = restaurantAdapter
 
-        Handler(Looper.getMainLooper()).post {
-            childFragmentManager.beginTransaction()
-                .replace(binding.navBarContainer.id, NavBarFragment())
-                .commitNow()
-        }
     }
 
     override fun onDestroyView() {

@@ -15,17 +15,13 @@ class SearchFragment : Fragment() {
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
-        Handler(Looper.getMainLooper()).post {
-            childFragmentManager.beginTransaction()
-                .replace(binding.navBarContainer.id, NavBarFragment())
-                .commitNow()
-        }
 
         return binding.root
     }

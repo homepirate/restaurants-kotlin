@@ -11,10 +11,4 @@
         android:layout_weight="1"
         android:padding="8dp" />
 
-    <FrameLayout
-        android:id="@+id/nav_bar_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
 </LinearLayout>
