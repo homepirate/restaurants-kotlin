@@ -1,22 +1,28 @@
 package com.example.restaurents
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.enableEdgeToEdge
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 
+
 class MainActivity : AppCompatActivity() {
+    private var navBar: NavBarFragment = NavBarFragment()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.nav_bar_container, navBar)
+            .commit()
+
         if (savedInstanceState == null) {
-//            showFragment(NavBarFragment::class.java)
-            showFragment(LoginRegisterFragment::class.java)
-//            showFragment(SearchFragment::class.java)
+            showFragment(LoginRegisterFragment::class.java) // Show LoginRegisterFragment first
         }
     }
 
@@ -25,7 +31,16 @@ class MainActivity : AppCompatActivity() {
         val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
 
         fragmentManager.fragments.forEach {
-            fragmentTransaction.hide(it)
+            println(it)
+            if (it::class.java != NavBarFragment::class.java){
+            fragmentTransaction.hide(it) }
+        }
+
+        if (fragmentClass == LoginRegisterFragment::class.java) {
+            findViewById<View>(R.id.nav_bar_container).visibility = View.GONE
+        } else {
+            findViewById<View>(R.id.nav_bar_container).visibility = View.VISIBLE
+
         }
 
         val tag = fragmentClass.simpleName
@@ -37,6 +52,6 @@ class MainActivity : AppCompatActivity() {
             fragmentTransaction.show(fragment)
         }
 
-        fragmentTransaction.commitNow()
+        fragmentTransaction.commit()
     }
 }

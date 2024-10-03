@@ -53,6 +53,6 @@ class NavBarFragment : Fragment() {
         }
 
         // Set the default selected item
-        navView.selectedItemId = R.id.navigation_search
+//        navView.selectedItemId = R.id.navigation_search
     }
 }
