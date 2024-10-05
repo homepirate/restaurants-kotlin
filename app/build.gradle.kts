@@ -4,21 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.restaurents"
+    namespace = "com.example.restaurants"
     compileSdk = 35
 
-    buildFeatures {
-        viewBinding = true
-        dataBinding = true
-    }
-
     defaultConfig {
-        applicationId = "com.example.restaurents"
+        applicationId = "com.example.restaurants"
         minSdk = 29
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -31,21 +25,27 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
     }
 }
 
 dependencies {
-
+    implementation("org.osmdroid:osmdroid-android:6.1.10") // Use the latest version
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
