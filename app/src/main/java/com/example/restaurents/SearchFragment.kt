@@ -7,7 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.restaurents.databinding.FragmentSearchBinding
+import com.example.restaurants.databinding.FragmentSearchBinding
+
 
 class SearchFragment : Fragment() {
 

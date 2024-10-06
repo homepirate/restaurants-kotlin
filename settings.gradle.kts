@@ -1,14 +1,9 @@
 pluginManagement {
     repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
-            }
-        }
+        google()
         mavenCentral()
         gradlePluginPortal()
+        maven { url = uri("https://api.mapbox.com/downloads/v2/releases/maven") }
     }
 }
 dependencyResolutionManagement {
@@ -16,9 +11,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://api.mapbox.com/downloads/v2/releases/maven") }
     }
 }
-
-rootProject.name = "restaurents"
+rootProject.name = "restaurants"
 include(":app")
- 

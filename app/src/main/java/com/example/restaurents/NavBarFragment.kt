@@ -1,11 +1,14 @@
 package com.example.restaurents
 
+
+import MapFragment
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.restaurants.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class NavBarFragment : Fragment() {
@@ -38,7 +41,7 @@ class NavBarFragment : Fragment() {
 
                 R.id.navigation_map -> {
                     Log.d("NavBarFragment", "Map button clicked")
-                    //(activity as MainActivity).showFragment(MapFragment::class.java)
+                    (activity as MainActivity).showFragment(MapFragment::class.java)
                     true
                 }
 
