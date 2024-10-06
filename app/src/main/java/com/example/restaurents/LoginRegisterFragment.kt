@@ -34,7 +34,7 @@ class LoginRegisterFragment : Fragment() {
 
         registerButton.setOnClickListener {
             // Открыть фрагмент регистрации
-//            (activity as MainActivity).showFragment(RegisterFragment::class.java)
+            (activity as MainActivity).showFragment(RegisterFragment::class.java)
             println("Open registration")
         }
     }
