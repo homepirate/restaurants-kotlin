@@ -13,6 +13,9 @@ import com.example.restaurants.R
 class MainActivity : AppCompatActivity() {
     private var navBar: NavBarFragment = NavBarFragment()
 
+    private val fragments = arrayOf(LoginRegisterFragment::class.java, LoginFragment::class.java,
+        RegisterFragment::class.java)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -37,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             fragmentTransaction.hide(it) }
         }
 
-        if (fragmentClass == LoginRegisterFragment::class.java) {
+        if (fragmentClass in fragments) {
             findViewById<View>(R.id.nav_bar_container).visibility = View.GONE
         } else {
             findViewById<View>(R.id.nav_bar_container).visibility = View.VISIBLE
