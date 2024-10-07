@@ -8,27 +8,28 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.restaurants.R
 
-class LoginRegisterFragment : Fragment() {
+
+class LoginFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_login_register, container, false)
+        return inflater.inflate(R.layout.fragment_login, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val goToLoginButton: Button = view.findViewById(R.id.go_to_login_button)
-        val goToRegisterButton: Button = view.findViewById(R.id.go_to_register_button)
+        val backToStartButton: Button = view.findViewById(R.id.back_to_start_button)
+        val logInButton: Button = view.findViewById(R.id.log_in_button)
 
-        goToLoginButton.setOnClickListener {
-            (activity as MainActivity).showFragment(LoginFragment::class.java)
+        logInButton.setOnClickListener {
+            (activity as MainActivity).showFragment(SearchFragment::class.java)
         }
 
-        goToRegisterButton.setOnClickListener {
-            (activity as MainActivity).showFragment(RegisterFragment::class.java)
+        backToStartButton.setOnClickListener {
+            (activity as MainActivity).showFragment(LoginRegisterFragment::class.java)
         }
     }
 }
