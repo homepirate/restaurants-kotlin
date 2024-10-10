@@ -57,6 +57,5 @@ class MainActivity : AppCompatActivity() {
         }
 
         fragmentTransaction.commit()
-        // test
     }
 }
