@@ -47,7 +47,7 @@ class NavBarFragment : Fragment() {
 
                 R.id.navigation_profile -> {
                     Log.d("NavBarFragment", "Profile button clicked")
-                    //(activity as MainActivity).showFragment(ProfileFragment::class.java)
+                    (activity as MainActivity).showFragment(ProfileFragment::class.java)
                     true
                 }
 
