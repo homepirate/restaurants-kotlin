@@ -2,6 +2,7 @@ package com.example.restaurents
 
 import android.os.Bundle
 import android.view.View
+
 import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.enableEdgeToEdge
 import androidx.fragment.app.Fragment
@@ -18,23 +19,25 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+
         supportFragmentManager.beginTransaction()
             .replace(R.id.nav_bar_container, navBar)
             .commit()
 
         if (savedInstanceState == null) {
-            showFragment(LoginRegisterFragment::class.java) // Show LoginRegisterFragment first
+            showFragment(LoginRegisterFragment::class.java)
         }
     }
 
-    public fun showFragment(fragmentClass: Class<out Fragment>) {
+    fun showFragment(fragmentClass: Class<out Fragment>) {
         val fragmentManager: FragmentManager = supportFragmentManager
         val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
 
         fragmentManager.fragments.forEach {
             println(it)
-            if (it::class.java != NavBarFragment::class.java){
-            fragmentTransaction.hide(it) }
+            if (it::class.java != NavBarFragment::class.java) {
+                fragmentTransaction.hide(it)
+            }
         }
 
         if (fragmentClass == LoginRegisterFragment::class.java) {
