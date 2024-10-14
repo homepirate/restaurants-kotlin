@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">restaurents</string>
     <string name="app_logo_desc">Логотип приложения Еда Для Меня</string>
+    <string name="search_location">Search location</string>
     <string name="reg">Регистрация</string>
     <string name="login_button_text">Войти</string>
 </resources>
