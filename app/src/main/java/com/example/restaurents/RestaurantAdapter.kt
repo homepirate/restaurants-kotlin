@@ -14,11 +14,13 @@ class RestaurantAdapter(private val restaurants: List<Restaurant>) : RecyclerVie
         private val titleTextView: TextView = view.findViewById(R.id.titleTextView)
         private val typeTextView: TextView = view.findViewById(R.id.typeTextView)
         private val priceCategoryTextView: TextView = view.findViewById(R.id.priceCategoryTextView)
+        private val addressTextView: TextView = view.findViewById(R.id.addressTextView)
 
         fun bind(restaurant: Restaurant) {
             titleTextView.text = restaurant.name
             typeTextView.text = restaurant.type
             priceCategoryTextView.text = restaurant.priceCategory
+            addressTextView.text = restaurant.address
         }
     }
 
