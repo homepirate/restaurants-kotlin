@@ -34,5 +34,12 @@
             android:textColor="@color/dark_blue"
             android:textSize="16sp" />
 
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp" />
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
