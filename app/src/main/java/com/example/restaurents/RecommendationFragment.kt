@@ -22,8 +22,8 @@ class RecommendationFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        restaurants.add(Restaurant("Restaurant 1", "Russian", "$$$"))
-        restaurants.add(Restaurant("Restaurant 2", "Italian", "$$"))
+        restaurants.add(Restaurant("Restaurant 1", "Russian", "$$$", "Moscow"))
+        restaurants.add(Restaurant("Restaurant 2", "Italian", "$$", "Moscow"))
     }
 
     override fun onCreateView(
